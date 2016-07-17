@@ -107,6 +107,8 @@ sub _is_connection_error {
 
 TRUE;
 
+__END__
+
 =encoding utf8
 
 =head1 Name

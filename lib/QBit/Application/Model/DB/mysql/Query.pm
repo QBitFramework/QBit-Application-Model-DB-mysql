@@ -30,6 +30,8 @@ sub _found_rows {
 
 TRUE;
 
+__END__
+
 =encoding utf8
 
 =head1 Name
