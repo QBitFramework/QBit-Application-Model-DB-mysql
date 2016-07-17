@@ -205,3 +205,165 @@ sub _create_sql_foreign_key {
 }
 
 TRUE;
+
+=encoding utf8
+
+=head1 Name
+ 
+QBit::Application::Model::DB::mysql::Table - Class for MySQL tables.
+ 
+=head1 Description
+ 
+Implements methods for MySQL tables.
+
+=head1 Package methods
+ 
+=head2 add
+
+B<Arguments:>
+ 
+=over
+
+=item *
+
+B<$data> - reference to hash
+ 
+=item *
+ 
+B<%opts> - additional options
+
+=over
+
+=item *
+
+B<replace> - boolean (uses 'REPLACE' instead 'INSERT')
+ 
+=back
+
+=back
+
+B<Return values:>
+
+=over
+
+=item
+
+B<$id> - ID new record (returns array if primary key has more than one columns)
+
+=back
+
+B<Example:>
+
+  my $id = $app->db->users->add({login => 'Login'});
+  
+=head2 add_multi
+
+ADD_CHUNK (records number in one statement; default: 1000)
+
+  $QBit::Application::Model::DB::mysql::ADD_CHUNK = 500;
+
+B<Arguments:>
+ 
+=over
+
+=item *
+
+B<$data> - reference to array
+ 
+=item *
+ 
+B<%opts> - additional options
+
+=over
+
+=item *
+
+B<replace> - boolean
+ 
+=back
+
+=back
+
+B<Return values:>
+
+=over
+
+=item
+
+B<$count> - records number
+
+=back
+
+B<Example:>
+
+  my $count = $app->db->users->add_multi([{login => 'Login 1'}, {login => 'Login 2'}]); # $count = 2
+  
+=head2 create_sql
+
+returns sql for create table.
+
+B<No arguments.>
+
+B<Return values:>
+
+=over
+
+=item
+
+B<$sql> - string
+
+=back
+
+B<Example:>
+
+  my $sql = $app->db->users->create_sql();
+  
+=head2 delete
+
+B<Arguments:>
+ 
+=over
+
+=item *
+
+B<$pkeys_or_filter> - perl variables or object (QBit::Application::Model::DB::filter)
+ 
+=back
+
+B<Example:>
+
+  $app->db->users->delete(1);
+  $app->db->users->delete([1]);
+  $app->db->users->delete({id => 1});
+  $app->db->users->delete($app->db->filter({login => 'Login'}));
+  
+=head2 edit
+
+B<Arguments:>
+ 
+=over
+
+=item *
+
+B<$pkeys_or_filter> - perl variables or object (QBit::Application::Model::DB::filter)
+
+=item *
+
+B<$data> - reference to hash
+ 
+=back
+
+B<Example:>
+
+  $app->db->users->edit(1, {login => 'LoginNew'});
+  $app->db->users->edit([1], {login => 'LoginNew'});
+  $app->db->users->edit({id => 1}, {login => 'LoginNew'});
+  $app->db->users->edit($app->db->filter({login => 'Login'}), {login => 'LoginNew'});
+  
+=head2 replace
+
+Same as
+
+  $app->db->users->add($data, replace => TRUE);
+
+=cut

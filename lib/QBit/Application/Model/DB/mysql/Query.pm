@@ -29,3 +29,33 @@ sub _found_rows {
 }
 
 TRUE;
+
+=encoding utf8
+
+=head1 Name
+ 
+QBit::Application::Model::DB::mysql::Query - Class for MySQL queries.
+ 
+=head1 Description
+ 
+Implements methods for MySQL queries.
+
+=head1 Package methods
+ 
+=head2 with_rollup
+
+B<Arguments:>
+
+=over
+
+=item
+
+B<$value> - boolean
+
+=back
+
+B<Example:>
+
+  $query->with_rollup(TRUE);
+
+=cut

@@ -106,3 +106,124 @@ sub _is_connection_error {
 }
 
 TRUE;
+
+=encoding utf8
+
+=head1 Name
+ 
+QBit::Application::Model::DB::mysql - Class for working with MySQL DB.
+ 
+=head1 Description
+ 
+Class for working with MySQL DB. It's not ORM.
+
+=head1 GitHub
+
+https://github.com/QBitFramework/QBit-Application-Model-DB-mysql
+
+=head1 Install
+
+=over
+ 
+=item *
+
+cpanm QBit::Application::Model::DB::mysql
+
+=item *
+
+apt-get install libqbit-application-model-db-mysql-perl (http://perlhub.ru/)
+
+=back
+
+=head1 Package methods
+ 
+=head2 filter
+ 
+B<Arguments:>
+ 
+=over
+
+=item *
+
+B<$filter> - filter (perl variables)
+ 
+=item *
+ 
+B<%opts> - additional options
+
+=over
+
+=item *
+
+B<type> - type (AND/OR NOT)
+ 
+=back
+
+=back
+
+B<Return values:>
+
+=over
+
+=item
+
+B<$filter> - object (QBit::Application::Model::DB::Filter)
+
+=back
+
+B<Example:>
+
+  my $filter = $app->db->filter([id => '=' => \23]);
+  
+=head2 query
+ 
+B<No arguments.>
+
+Create and returns a new query object. 
+ 
+B<Return values:>
+
+=over
+
+=item
+
+B<$query> - object (QBit::Application::Model::DB::mysql::Query)
+
+=back
+
+B<Example:>
+
+  my $query = $app->db->query();
+  
+=head2 transaction
+ 
+B<Arguments:>
+
+=over
+ 
+=item
+ 
+B<$sub> - reference to sub
+
+=back
+
+B<Example:>
+
+  $app->db->transaction(sub {
+      # work with db
+      ...
+  });
+  
+=head1 Internal packages
+ 
+=over
+ 
+=item B<L<QBit::Application::Model::DB::mysql::Field>> - class for MySQL fields;
+ 
+=item B<L<QBit::Application::Model::DB::mysql::Query>> - class for MySQL queries;
+ 
+=item B<L<QBit::Application::Model::DB::mysql::Table>> - class for MySQL tables;
+ 
+=back
+
+=cut
