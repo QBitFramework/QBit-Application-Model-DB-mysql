@@ -1,0 +1,31 @@
+==================================================
+Changes from 2015-09-05 00:00:00 +0000 to present.
+==================================================
+
+------------------------------------------
+version 0.008 at 2016-09-04 19:15:35 +0000
+------------------------------------------
+
+  Change: d5d7e43f78b56158f5989bf3ed9045449fb6f780
+  Author: Igor <igor-sverdlov@mail.ru>
+  Date : 2016-09-04 23:13:38 +0000
+
+    Merge pull request #6 from Madskill/upload_to_cpan
+
+    Upload to cpan 
+
+  Change: 2ca5f251351aed940cb0e10ca09b801b9caf5f61
+  Author: Igor Sverdlov <igor-sverdlov@mail.ru>
+  Date : 2016-07-17 18:54:03 +0000
+
+    use __END__ 
+
+  Change: 6fe936f9283f4d90feb434d9a25ba1eb09f0f77d
+  Author: Igor Sverdlov <igor-sverdlov@mail.ru>
+  Date : 2016-07-17 17:26:30 +0000
+
+    added pod documentation and upload to cpan 
+
+================================================
+Plus 7 releases after 2015-09-05 00:00:00 +0000.
+================================================

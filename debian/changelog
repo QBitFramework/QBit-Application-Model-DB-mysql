@@ -1,3 +1,11 @@
+libqbit-application-model-db-mysql-perl (0.008) raring; urgency=low
+
+  * use __END__
+
+  * added pod documentation and upload to cpan
+
+ -- Igor Sverdlov <igor-sverdlov@mail.ru>  Sun, 04 Sep 2016 22:15:35 +0300
+
 libqbit-application-model-db-mysql-perl (0.007) raring; urgency=low
 
   * Reconnect at mysql err 2013 - Lost connection to mysql server during
