@@ -1,3 +1,9 @@
+libqbit-application-model-db-mysql-perl (0.009) raring; urgency=low
+
+  * deleted require
+
+ -- Igor Sverdlov <igor-sverdlov@mail.ru>  Sun, 30 Oct 2016 13:40:33 +0300
+
 libqbit-application-model-db-mysql-perl (0.008) raring; urgency=low
 
   * use __END__

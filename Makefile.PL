@@ -16,7 +16,6 @@ my %WriteMakefileArgs = (
   "LICENSE" => "gpl",
   "NAME" => "QBit::Application::Model::DB::mysql",
   "PREREQ_PM" => {
-    "Exception::DB::DuplicateEntry" => 0,
     "QBit::Application::Model::DB" => 0,
     "QBit::Application::Model::DB::Field" => 0,
     "QBit::Application::Model::DB::Filter" => 0,
@@ -25,7 +24,7 @@ my %WriteMakefileArgs = (
     "base" => 0,
     "qbit" => 0
   },
-  "VERSION" => "0.008",
+  "VERSION" => "0.009",
   "test" => {
     "TESTS" => ""
   }
@@ -33,7 +32,6 @@ my %WriteMakefileArgs = (
 
 
 my %FallbackPrereqs = (
-  "Exception::DB::DuplicateEntry" => 0,
   "QBit::Application::Model::DB" => 0,
   "QBit::Application::Model::DB::Field" => 0,
   "QBit::Application::Model::DB::Filter" => 0,

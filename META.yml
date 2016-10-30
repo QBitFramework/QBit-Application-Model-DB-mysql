@@ -13,7 +13,6 @@ meta-spec:
   version: 1.4
 name: QBit-Application-Model-DB-mysql
 requires:
-  Exception::DB::DuplicateEntry: 0
   QBit::Application::Model::DB: 0
   QBit::Application::Model::DB::Field: 0
   QBit::Application::Model::DB::Filter: 0
@@ -21,4 +20,4 @@ requires:
   QBit::Application::Model::DB::Table: 0
   base: 0
   qbit: 0
-version: 0.008
+version: 0.009
