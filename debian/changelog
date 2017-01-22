@@ -1,3 +1,9 @@
+libqbit-application-model-db-mysql-perl (0.010) raring; urgency=low
+
+  * added collate, engine and length for text column in index
+
+ -- Igor Sverdlov <igor-sverdlov@mail.ru>  Sun, 22 Jan 2017 14:50:16 +0300
+
 libqbit-application-model-db-mysql-perl (0.009) raring; urgency=low
 
   * deleted require

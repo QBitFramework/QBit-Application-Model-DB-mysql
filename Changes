@@ -1,10 +1,34 @@
 ==================================================
-Changes from 2015-10-31 00:00:00 +0000 to present.
+Changes from 2016-01-23 00:00:00 +0000 to present.
 ==================================================
 
 ------------------------------------------
-version 0.009 at 2016-10-30 10:40:33 +0000
+version 0.010 at 2017-01-22 11:50:15 +0000
 ------------------------------------------
+
+  Change: 6f5186d0571bbdf81df7022b1d6771214aa40d40
+  Author: Igor <igor-sverdlov@mail.ru>
+  Date : 2017-01-22 15:49:33 +0000
+
+    Merge pull request #8 from Madskill/added_collate_and_engine
+
+    added collate, engine and length for text column in index 
+
+  Change: 0698871b13e7cdcbe4ea8d8dfc6bffd9d8cd489d
+  Author: Igor Sverdlov <igor-sverdlov@mail.ru>
+  Date : 2017-01-22 14:46:37 +0000
+
+    added collate, engine and length for text column in index 
+
+------------------------------------------
+version 0.009 at 2016-10-30 10:40:58 +0000
+------------------------------------------
+
+  Change: 4b3c3428d15ae74f535898effb0819cadff84bc1
+  Author: Igor Sverdlov <igor-sverdlov@mail.ru>
+  Date : 2016-10-30 13:40:58 +0000
+
+    Version 0.009 
 
   Change: 331de5303c3de7e92d2db4e4fb8c19dcf07a38ad
   Author: Igor <igor-sverdlov@mail.ru>
@@ -51,5 +75,5 @@ version 0.008 at 2016-09-04 19:16:05 +0000
     added pod documentation and upload to cpan 
 
 ================================================
-Plus 7 releases after 2015-10-31 00:00:00 +0000.
+Plus 7 releases after 2016-01-23 00:00:00 +0000.
 ================================================
