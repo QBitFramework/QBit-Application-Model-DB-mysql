@@ -13,6 +13,9 @@ sub create_sql {
 
     throw gettext('Inherites does not realize') if $self->inherits;
 
+    my $collate = defined($self->collate()) ? (" COLLATE '" . $self->collate() . "'") : '';
+    my $engine = defined($self->engine()) ? $self->engine() : 'InnoDB';
+
     return
         'CREATE TABLE ' 
       . $self->quote_identifier($self->name) 
@@ -29,7 +32,7 @@ sub create_sql {
         (map {$self->_create_sql_foreign_key($_)} @{$self->foreign_keys || []}),
       )
       . "\n"
-      . ") ENGINE='InnoDB' DEFAULT CHARACTER SET 'UTF8';";
+      . ") ENGINE='$engine' DEFAULT CHARACTER SET 'UTF8'$collate;";
 }
 
 sub add_multi {
@@ -180,13 +183,17 @@ sub _convert_fk_auto_type {
 sub _create_sql_index {
     my ($self, $index) = @_;
 
+    my @fields = map {ref($_) ? $_ : {name => $_}} @{$index->{'fields'}};
+
     return
+        #TODO: unique => TRUE -> type => UNIQUE/FULLTEXT
         ($index->{'unique'} ? 'UNIQUE ' : '') 
       . 'INDEX '
       . $self->quote_identifier(
-        substr(join('_', ($index->{'unique'} ? 'uniq' : ()), $self->name, '', @{$index->{'fields'}}), 0, 64))
+        substr(join('_', ($index->{'unique'} ? 'uniq' : ()), $self->name, '', map {$_->{'name'}} @fields), 0, 64))
       . ' ('
-      . join(', ', map {$self->quote_identifier($_)} @{$index->{'fields'}}) . ')';
+      . join(', ', map {$self->quote_identifier($_->{'name'}) . ($_->{'length'} ? "($_->{'length'})" : '')} @fields)
+      . ')';
 }
 
 sub _create_sql_foreign_key {
