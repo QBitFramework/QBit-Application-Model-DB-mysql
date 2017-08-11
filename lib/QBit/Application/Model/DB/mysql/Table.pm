@@ -92,18 +92,21 @@ sub add_multi {
             sub {
                 my ($db, @data) = @_;
 
-                my $sql;
+                my ($sql, $values);
                 my $sth;
                 my $err_code;
 
                 while (my @add_data = splice(@data, 0, $ADD_CHUNK)) {
-                    $sql = undef if @add_data != $ADD_CHUNK;
+                    if (@add_data != $ADD_CHUNK) {
+                        $sql    = undef;
+                        $values = undef;
+                    }
+
                     my @params = ();
-                    my $values = '';
                     foreach my $row (@add_data) {
-                        unless ($sql) {
-                            $values .= ",\n" if $row != $add_data[0];
-                            $values .= '(?' . ', ?' x (@real_field_names - 1) . ')';
+                        unless ($values) {
+                            $values = '(?' . ', ?' x (@real_field_names - 1) . ')';
+                            $values = $values . (",\n" . $values) x (@add_data - 1);
                         }
 
                         foreach my $name (@$field_names) {
