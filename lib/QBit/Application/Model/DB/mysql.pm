@@ -14,10 +14,6 @@ sub filter {
     return QBit::Application::Model::DB::Filter->new($filter, %opts, db => $self);
 }
 
-sub get_dbh {
-    $_[0]->{'__DBH__'}{$$}
-}
-
 sub query {
     my ($self) = @_;
 
@@ -178,26 +174,6 @@ B<$filter> - object (QBit::Application::Model::DB::Filter)
 B<Example:>
 
   my $filter = $app->db->filter([id => '=' => \23]);
-
-=head2 get_dbh
-
-B<No arguments.>
-
-Returns DBI object.
-
-B<Return values:>
-
-=over
-
-=item
-
-B<$dbh> - object (DBI::db)
-
-=back
-
-B<Example:>
-
-  my $dbh = $app->db->get_dbh();
 
 =head2 query
 
