@@ -10,10 +10,10 @@ our %DATA_TYPES = (
     TIMESTAMP  => 'EMPTY',
     DATETIME   => 'EMPTY',
     YEAR       => 'EMPTY',
-    TINYBLOB   => 'EMPTY',
-    BLOB       => 'EMPTY',
-    MEDIUMBLOB => 'EMPTY',
-    LONGBLOB   => 'EMPTY',
+    TINYBLOB   => 'BLOB',
+    BLOB       => 'BLOB',
+    MEDIUMBLOB => 'BLOB',
+    LONGBLOB   => 'BLOB',
     BOOLEAN    => 'EMPTY',
     TINYINT    => 'INT',
     SMALLINT   => 'INT',
@@ -35,6 +35,7 @@ our %DATA_TYPES = (
     LONGTEXT   => 'TEXT',
     ENUM       => 'ENUM',
     SET        => 'ENUM',
+    JSON       => 'BLOB',
 );
 
 our %FIELD2STR = (
@@ -124,7 +125,6 @@ our %FIELD2STR = (
                     : ''
                   )
                   . ($f->{'not_null'} ? ' NOT NULL' : '')
-                  . (exists($f->{'default'}) ? ' DEFAULT ' . $f->quote($f->{'default'}) : '')
               } @locales
         );
     },
@@ -145,6 +145,9 @@ our %FIELD2STR = (
           . ($_->{'not_null'} ? ' NOT NULL' : '')
           . (exists($_->{'default'}) ? ' DEFAULT ' . $_->quote($_->{'default'}) : '');
     },
+    BLOB => sub {
+        return $_->quote_identifier($_->name) . ' ' . uc($_->type) . ($_->{'not_null'} ? ' NOT NULL' : '');
+    },
 );
 
 sub init_check {
@@ -163,3 +166,41 @@ sub create_sql {
 }
 
 TRUE;
+
+__END__
+
+=encoding utf8
+
+=head1 Name
+
+QBit::Application::Model::DB::mysql::Field - Class for MySQL fields.
+
+=head1 Description
+
+Implements work with MySQL fields.
+
+=head1 Package methods
+
+=head2 create_sql
+
+Generate and returns a sql for field.
+
+B<No arguments.>
+
+B<Return values:>
+
+=over
+
+=item
+
+B<$sql> - string
+
+=back
+
+=head2 init_check
+
+Check options for field.
+
+B<No arguments.>
+
+=cut

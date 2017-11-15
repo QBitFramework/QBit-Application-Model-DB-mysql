@@ -1,0 +1,167 @@
+==================================================
+Changes from 2016-11-05 00:00:00 +0000 to present.
+==================================================
+
+------------------------------------------
+version 0.015 at 2017-11-05 00:27:51 +0000
+------------------------------------------
+
+  Change: 688afcd970bc112a9077a8e80788bd96737ad2b8
+  Author: Igor <igor-sverdlov@mail.ru>
+  Date : 2017-11-05 03:26:53 +0000
+
+    Merge pull request #14 from Madskill/get_query_id
+
+    added get_query_id 
+
+  Change: 18077e549eb36768619f8c5abdc73305827c5527
+  Author: Igor Sverdlov <igor-sverdlov@mail.ru>
+  Date : 2017-11-05 03:25:26 +0000
+
+    added get_query_id 
+
+------------------------------------------
+version 0.014 at 2017-09-17 17:06:41 +0000
+------------------------------------------
+
+  Change: dcfc1a4f7fb296e0c494463819f3ee3d021028c9
+  Author: Igor Sverdlov <igor-sverdlov@mail.ru>
+  Date : 2017-09-17 20:06:41 +0000
+
+    Version 0.014 
+
+  Change: 62c40e3a98deb4a35f3030fc7ec7d1143467fb3b
+  Author: Igor <igor-sverdlov@mail.ru>
+  Date : 2017-09-17 20:05:41 +0000
+
+    Merge pull request #13 from Madskill/use_query_in_add
+
+    use query in add 
+
+  Change: 79dd38bb658e8c7bba19fad23abe038e4d201269
+  Author: Igor Sverdlov <igor-sverdlov@mail.ru>
+  Date : 2017-09-17 20:04:24 +0000
+
+    use query in add 
+
+------------------------------------------
+version 0.013 at 2017-09-03 18:32:13 +0000
+------------------------------------------
+
+  Change: 9bb3dcd5ced226532aaa685831dfd3051fc7cc16
+  Author: Igor Sverdlov <igor-sverdlov@mail.ru>
+  Date : 2017-09-03 21:32:13 +0000
+
+    Version 0.013 
+
+  Change: dc5c4b88514202d942354d64e52079ca7a11beba
+  Author: Igor <igor-sverdlov@mail.ru>
+  Date : 2017-09-03 21:26:37 +0000
+
+    Merge pull request #12 from Madskill/fields_order
+
+    added order for add[_multi] 
+
+  Change: e8312534fda225f52ed1872db78a84f630b325a2
+  Author: Igor Sverdlov <igor-sverdlov@mail.ru>
+  Date : 2017-09-03 21:24:59 +0000
+
+    added order for add[_multi] 
+
+------------------------------------------
+version 0.012 at 2017-08-27 08:35:39 +0000
+------------------------------------------
+
+  Change: e35f9bf2b19cd5622fb1decea0620ecd3f114984
+  Author: Igor Sverdlov <igor-sverdlov@mail.ru>
+  Date : 2017-08-27 11:35:39 +0000
+
+    Version 0.012 
+
+  Change: bcbc32685f69ca9b66dd58f466a1452e0667ac9d
+  Author: Igor <igor-sverdlov@mail.ru>
+  Date : 2017-08-27 11:34:18 +0000
+
+    Merge pull request #11 from Madskill/delete__get_dbh
+
+    deleted get_dbh. Use set_dbh and dbh 
+
+  Change: f29baee2280bac5747161c82eb1bb73ea40fdf87
+  Author: Igor Sverdlov <igor-sverdlov@mail.ru>
+  Date : 2017-08-27 11:32:06 +0000
+
+    deleted get_dbh. Use set_dbh and dbh 
+
+------------------------------------------
+version 0.011 at 2017-08-11 20:30:59 +0000
+------------------------------------------
+
+  Change: e6c71f5cf4041f14c409ee54c282362fcc94788a
+  Author: Igor Sverdlov <igor-sverdlov@mail.ru>
+  Date : 2017-08-11 23:30:59 +0000
+
+    Version 0.011 
+
+  Change: e1aa0afe260e5669a922f295b452a465ca80ea51
+  Author: Igor <igor-sverdlov@mail.ru>
+  Date : 2017-08-11 14:29:30 +0000
+
+    Merge pull request #10 from QBitFramework/speed_up_add_multi
+
+    Speed up add multi 
+
+  Change: 8770b90cf658c748ed2a6c41c0734e7f08ee7a63
+  Author: blizzard <blizzard@yandex-team.ru>
+  Date : 2017-08-11 13:24:11 +0000
+
+    Merge branch 'master' of
+    https://github.com/QBitFramework/QBit-Application-Model-DB-mysql into
+    speed_up_add_multi 
+
+  Change: 384f060a279b7a96946dd016897e30708624f42c
+  Author: blizzard <blizzard@yandex-team.ru>
+  Date : 2017-08-11 13:23:25 +0000
+
+    speed up 
+
+  Change: 85af81ea74c3509801a2b5039f9394ee64f2d37c
+  Author: Igor <igor-sverdlov@mail.ru>
+  Date : 2017-08-09 02:53:14 +0000
+
+    Merge pull request #9 from QBitFramework/speed_up_add_multi
+
+    speed up add_multi, added class for index, added sub get_dbh 
+
+  Change: d7234586e67d0ddb08f26a785dc74ed9f52ce141
+  Author: blizzard <blizzard@yandex-team.ru>
+  Date : 2017-08-09 01:27:44 +0000
+
+    speed up add_multi, added class for index, added sub get_dbh 
+
+------------------------------------------
+version 0.010 at 2017-01-22 11:50:33 +0000
+------------------------------------------
+
+  Change: bf125d8502b2d849cb29d16a0bb5218fde79a872
+  Author: Igor Sverdlov <igor-sverdlov@mail.ru>
+  Date : 2017-01-22 14:50:33 +0000
+
+    Version 0.010 
+
+  Change: 6f5186d0571bbdf81df7022b1d6771214aa40d40
+  Author: Igor <igor-sverdlov@mail.ru>
+  Date : 2017-01-22 15:49:33 +0000
+
+    Merge pull request #8 from Madskill/added_collate_and_engine
+
+    added collate, engine and length for text column in index 
+
+  Change: 0698871b13e7cdcbe4ea8d8dfc6bffd9d8cd489d
+  Author: Igor Sverdlov <igor-sverdlov@mail.ru>
+  Date : 2017-01-22 14:46:37 +0000
+
+    added collate, engine and length for text column in index 
+
+================================================
+Plus 9 releases after 2016-11-05 00:00:00 +0000.
+================================================

@@ -1,3 +1,55 @@
+libqbit-application-model-db-mysql-perl (0.015) raring; urgency=low
+
+  * added get_query_id
+
+ -- Igor Sverdlov <igor-sverdlov@mail.ru>  Sun, 05 Nov 2017 03:27:52 +0300
+
+libqbit-application-model-db-mysql-perl (0.014) raring; urgency=low
+
+  * use query in add
+
+ -- Igor Sverdlov <igor-sverdlov@mail.ru>  Sun, 17 Sep 2017 20:06:26 +0300
+
+libqbit-application-model-db-mysql-perl (0.013) raring; urgency=low
+
+  * added order for add[_multi]
+
+ -- Igor Sverdlov <igor-sverdlov@mail.ru>  Sun, 03 Sep 2017 21:32:04 +0300
+
+libqbit-application-model-db-mysql-perl (0.012) raring; urgency=low
+
+  * deleted get_dbh. Use set_dbh and dbh
+
+ -- Igor Sverdlov <igor-sverdlov@mail.ru>  Sun, 27 Aug 2017 11:35:30 +0300
+
+libqbit-application-model-db-mysql-perl (0.011) raring; urgency=low
+
+  * speed up
+
+  * speed up add_multi, added class for index, added sub get_dbh
+
+ -- Igor Sverdlov <igor-sverdlov@mail.ru>  Fri, 11 Aug 2017 23:30:38 +0300
+
+libqbit-application-model-db-mysql-perl (0.010) raring; urgency=low
+
+  * added collate, engine and length for text column in index
+
+ -- Igor Sverdlov <igor-sverdlov@mail.ru>  Sun, 22 Jan 2017 14:50:16 +0300
+
+libqbit-application-model-db-mysql-perl (0.009) raring; urgency=low
+
+  * deleted require
+
+ -- Igor Sverdlov <igor-sverdlov@mail.ru>  Sun, 30 Oct 2016 13:40:33 +0300
+
+libqbit-application-model-db-mysql-perl (0.008) raring; urgency=low
+
+  * use __END__
+
+  * added pod documentation and upload to cpan
+
+ -- Igor Sverdlov <igor-sverdlov@mail.ru>  Sun, 04 Sep 2016 22:15:35 +0300
+
 libqbit-application-model-db-mysql-perl (0.007) raring; urgency=low
 
   * Reconnect at mysql err 2013 - Lost connection to mysql server during

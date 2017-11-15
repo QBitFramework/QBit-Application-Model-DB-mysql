@@ -8,8 +8,6 @@ use QBit::Application::Model::DB::mysql::Table;
 use QBit::Application::Model::DB::mysql::Query;
 use QBit::Application::Model::DB::Filter;
 
-eval {require Exception::DB::DuplicateEntry};
-
 sub filter {
     my ($self, $filter, %opts) = @_;
 
@@ -201,11 +199,11 @@ B<%opts> - options
 
 comment
 
-=item
+=item *
 
 without_check_fields
 
-=item
+=item *
 
 without_table_alias
 
@@ -217,7 +215,7 @@ B<Return values:>
 
 =over
 
-=item
+=item *
 
 B<$query> - object (QBit::Application::Model::DB::mysql::Query)
 
@@ -233,7 +231,7 @@ B<Arguments:>
 
 =over
 
-=item
+=item *
 
 B<$query_id> - number (ID query)
 
@@ -243,7 +241,7 @@ B<Return values:>
 
 =over
 
-=item
+=item *
 
 B<$res> - Returns the number of rows affected or undef on error.
 
@@ -261,7 +259,7 @@ B<Arguments:>
 
 =over
 
-=item
+=item *
 
 B<$sub> - reference to sub
 
