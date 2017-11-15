@@ -1,3 +1,9 @@
+libqbit-application-model-db-mysql-perl (0.016) raring; urgency=low
+
+  * support comments and deleted method get_query_id
+
+ -- Igor Sverdlov <igor-sverdlov@mail.ru>  Thu, 16 Nov 2017 01:10:15 +0300
+
 libqbit-application-model-db-mysql-perl (0.015) raring; urgency=low
 
   * added get_query_id
