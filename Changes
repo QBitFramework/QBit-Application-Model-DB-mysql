@@ -1,10 +1,34 @@
 ==================================================
-Changes from 2016-11-15 00:00:00 +0000 to present.
+Changes from 2016-11-19 00:00:00 +0000 to present.
 ==================================================
 
 ------------------------------------------
-version 0.016 at 2017-11-15 22:10:14 +0000
+version 0.017 at 2017-11-19 07:14:23 +0000
 ------------------------------------------
+
+  Change: ca5d0623e54933fcd038ba763ddce04b7b30887a
+  Author: Igor <igor-sverdlov@mail.ru>
+  Date : 2017-11-19 10:13:44 +0000
+
+    Merge pull request #16 from Madskill/use_mysql_function_in_update
+
+    remove edit 
+
+  Change: dc3d4a19c772eafb723a2ae5079764f5d13ed5b9
+  Author: Igor Sverdlov <igor-sverdlov@mail.ru>
+  Date : 2017-11-19 10:12:44 +0000
+
+    remove edit 
+
+------------------------------------------
+version 0.016 at 2017-11-15 22:10:24 +0000
+------------------------------------------
+
+  Change: aef08b81989fd8fc7b816c9ef51a17a89c700225
+  Author: Igor Sverdlov <igor-sverdlov@mail.ru>
+  Date : 2017-11-16 01:10:24 +0000
+
+    Version 0.016 
 
   Change: 6a122b37f68053303c507e80527ac70c06a8b165
   Author: Igor <igor-sverdlov@mail.ru>
@@ -197,5 +221,5 @@ version 0.010 at 2017-01-22 11:50:33 +0000
     added collate, engine and length for text column in index 
 
 ================================================
-Plus 9 releases after 2016-11-15 00:00:00 +0000.
+Plus 9 releases after 2016-11-19 00:00:00 +0000.
 ================================================
